@@ -41,5 +41,7 @@ Once I looked through the error stack, it says the source of the error is at lin
 - There's a typo in JSON key for `temperature`, it should be `temp`
 
 ## Exercise 3
+- `merge_sort` seems to throw an `IndexError` for an out of range in line 37.
+- After looking through the code I noticed that `i` and `j` should be replaced.
+- Then another bug in `binary_search` function. The division is not rounded to the closest integer but left as a float. Fixed that too.
 
-[[Your answer goes here!]]
