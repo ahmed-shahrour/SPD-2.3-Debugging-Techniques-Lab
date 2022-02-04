@@ -34,7 +34,11 @@ Once I looked through the error stack, it says the source of the error is at lin
 - then I fixed the `redirect(url_for('/'))` to `redirect(url_for('home'))`.
 ## Exercise 2
 
-[[Your answer goes here!]]
+- When we run the code it throws an internal server error. It traces to line 52 in `app.py`.
+-  `KeyError: 'name'. result_json` returns an api error which could possibly be becasue of bad params which is `None`
+- I fixed the argument type issues but I still get an API error.
+- I changed `place` to `q` in the params.
+- There's a typo in JSON key for `temperature`, it should be `temp`
 
 ## Exercise 3
 
