@@ -15,8 +15,23 @@ _Then I noticed another bug ..._
 
 ## Exercise 1
 
-[[Your answer goes here!]]
+- When I submit the form for a New Order, the page throws a 
+```
+TypeError: 'topping' is an invalid keyword argument for PizzaTopping
+```
+Once I looked through the error stack, it says the source of the error is at line 79 in `app.py`.  The POST request is received via the backend server logs. So I think the error tail is when we submit a POST request for a New Order.
 
+- The error leads us to the misuse of class `PizzaTopping`. There isn't an argument called `topping`. It should be `topping_type`. So I fixed that but another error pops up
+
+- `pizza_size_str` variable is `None`. The HTML form input is also not matching so I renamed it
+
+- The same issue occurrs for `order_name`.
+
+- After all that, the db is committed appropriately so I fixed that too.
+
+- Fixed the `PizzaTopping` array being created.
+
+- then I fixed the `redirect(url_for('/'))` to `redirect(url_for('home'))`.
 ## Exercise 2
 
 [[Your answer goes here!]]
